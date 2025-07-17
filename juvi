@@ -1,0 +1,6 @@
+function getLoveNote() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var notes = sheet.getRange("A1:A").getValues().filter(String);
+  var random = Math.floor(Math.random() * notes.length);
+  return notes[random][0];
+}
